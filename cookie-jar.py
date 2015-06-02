@@ -107,7 +107,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                         'ZjNkMDBiYjg3NzhlMDhhYzI1YjdhYjRlYjY1YWQwOWQK', 
                         'MWNlOTcwOWI5YTUyYjIzMDk3MzJmYjQ3ODlmOWNlNGMK']
 
-if __name__ == '__main__':
+def main(): 
     server_class = BaseHTTPServer.HTTPServer
     httpd = server_class((HOST_NAME, PORT_NUMBER), MyHandler)
     print time.asctime(), "Server Starts - %s:%s" % (HOST_NAME, PORT_NUMBER)
@@ -117,3 +117,6 @@ if __name__ == '__main__':
         pass
     httpd.server_close()
     print time.asctime(), "Server Stops - %s:%s" % (HOST_NAME, PORT_NUMBER)
+
+if __name__ == '__main__':
+    main()
